@@ -5,4 +5,27 @@ body {
 h1 {
     font-size: 2rem;
     text-align: center;
+    background-color: aquamarine;
+    padding: 2rem 0 2rem;
+}
+
+.nav {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.registration {
+    display: block;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: crimson;
+}
+
+th td {
+    border: solid 1px;
+}
+footer p {
+    text-align: center;
 }

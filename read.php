@@ -33,10 +33,36 @@ try {
 <main>
         <article>
             <h1>釣竿管理アプリ</h1>
-            <div>
-                <a href="#"><p>–釣竿－</p></a>
+            <div class="nav">
+                <a href="create.php"><p>–登録–</p></a>
             </div>
+            <table class="users_table">
+                <tr>
+                    <th>メーカー名</th>
+                    <th>全長</th>
+                    <th>継数</th>
+                    <th>仕舞寸法</th>
+                    <th>錘負荷</th>
+                </tr>
+                <?php
+                foreach ($users as $user) {
+                    $table_row = "
+                    <tr>
+                    <td>{$user['name']}</td>
+                    <td>{$user['length']}</td>
+                    <td>{$user['number']}</td>
+                    <td>{$user['closing_size']}</td>
+                    <td>{$user['weight']}</td>
+                    </tr>
+                    ";
+                    echo $table_row;
+                }
+                ?>
+            </table>
         </article>
     </main>
+    <footer>
+        <p class="copyright">&copy; 釣竿管理アプリ 2022 Ashika</p>
+    </footer>
 </body>
 </html>

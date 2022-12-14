@@ -33,10 +33,13 @@ try {
 <main>
         <article>
             <h1>釣竿管理アプリ</h1>
-            <div>
+            <div class="nav">
                 <a href="read.php"><p>–釣竿－</p></a>
             </div>
         </article>
     </main>
+    <footer>
+        <p class="copyright">&copy; 釣竿管理アプリ 2022 Ashika</p>
+    </footer>
 </body>
 </html>
