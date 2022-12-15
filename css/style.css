@@ -20,12 +20,23 @@ h1 {
 
 table {
     border-collapse: collapse;
-    background-color: crimson;
+    text-align: center;
+    margin: 2rem auto;
 }
 
-th td {
-    border: solid 1px;
+th {
+    border: solid 2px;
+    width: auto;
+    height: 2rem;
+    padding: 1rem 2rem;
 }
+
+tr td {
+    font-size: 1rem;
+    border: solid 1px;
+    padding: 1rem;
+}
+
 footer p {
     text-align: center;
 }
