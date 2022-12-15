@@ -34,8 +34,9 @@ try {
         <article>
             <h1>釣竿管理アプリ</h1>
             <div class="nav">
-                <a href="create.php"><p>–登録–</p></a>
+                <a href="create.php" class="btn"><p>登録</p></a>
             </div>
+            
             <table class="users_table">
                 <tr>
                     <th>メーカー名</th>
@@ -43,6 +44,8 @@ try {
                     <th>継数</th>
                     <th>仕舞寸法</th>
                     <th>錘負荷</th>
+                    <th>編集</th>
+                    <th>削除</th>
                 </tr>
                 <?php
                 foreach ($users as $user) {
@@ -53,6 +56,8 @@ try {
                     <td>{$user['number']}</td>
                     <td>{$user['closing_size']}</td>
                     <td>{$user['weight']}</td>
+                    <td><a href='update.php?id={$user['id']}'>編集</a></td>
+                    <td><a href='delete.php?id={$user['id']}'>削除</a></td>
                     </tr>
                     ";
                     echo $table_row;
