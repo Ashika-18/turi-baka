@@ -14,10 +14,6 @@ try {
 
     $stmt_delete->execute();
 
-    $count = $stmt_delete->rowCount();
-
-    $message = "アイテムを{count}件削除しました！";
-
     header("Location: read.php?message={$message}");
 } catch (PDOException $e) {
     exit($e->getMessage());

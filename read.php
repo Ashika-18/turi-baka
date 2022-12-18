@@ -32,7 +32,10 @@ try {
 <body>
 <main>
         <article>
-            <h1>釣竿管理アプリ</h1>
+            <header>
+                <a href="index.php">home</a>
+            </header>
+            <h1>釣竿一覧</h1>
             <div class="nav">
                 <a href="create.php" class="btn"><p>登録</p></a>
             </div>

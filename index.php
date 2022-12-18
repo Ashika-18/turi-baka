@@ -30,12 +30,15 @@ try {
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<main>
+    <header>
+        <nav>
+            <a href="index.php">home</a>
+        </nav>
+    </header>
+    <main>
         <article>
             <h1>釣竿管理アプリ</h1>
-            <div class="nav">
-                <a href="read.php"><p>–釣竿－</p></a>
-            </div>
+            <a href="read.php">一覧</a>
         </article>
     </main>
     <footer>

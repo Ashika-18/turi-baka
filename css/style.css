@@ -2,27 +2,57 @@ body {
     font-family: "Sawarabi Mincho";
 }
 
-h1 {
-    font-size: 2rem;
+header {
+    background-color: aqua;
+    height: 2rem;
+}
+
+nav {
+    margin: 0 2rem;
+    line-height: 2rem;
+}
+
+main {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
     text-align: center;
-    background-color: aquamarine;
     padding: 2rem 0 2rem;
 }
 
-.nav {
-    display: inline-flex;
-    margin: 2rem auto 1rem auto;
-    text-align: center;
-    border: 1px solid;
-    border-radius: 5px;
-    background-color: orange;
-    text-decoration: none;
-    padding: 0.5rem 0.5rem;
+main h1 {
+    font-size: 2rem;
 }
 
 
+.btn {
+    margin-right: auto;
+}
+
 .registration {
-    display: block;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+}
+
+.input {
+    display: inline;
+    margin: 1rem auto;
+    border: solid 1px;
+    border-radius: 5px;
+    height: 2rem;
+    background-color: darkgrey;
+}
+
+.submit_btn {
+    border: solid 1px;
+    border-radius: 5px;
+    padding: 0.5rem 0.5rem;
+    background-color: orange;
+    margin: 1rem auto;
+    text-align: center;
 }
 
 table {

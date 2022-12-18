@@ -15,6 +15,7 @@ if (isset($_POST['submit'])) {
             number = :number,
             closing_size = :closing_size,
             weight = :weight
+            WHERE id = :id
         ';
 
         $stmt_update = $pdo->prepare($sql_update);
@@ -24,12 +25,11 @@ if (isset($_POST['submit'])) {
         $stmt_update->bindValue(':number', $_POST['number'], PDO::PARAM_INT);
         $stmt_update->bindValue(':closing_size', $_POST['closing_size'], PDO::PARAM_STR);
         $stmt_update->bindValue(':weight', $_POST['weight'], PDO::PARAM_STR);
+        $stmt_update->bindValue(':id', $_GET['id'], PDO::PARAM_INT);
 
         $stmt_update->execute();
 
-        $count = $stmt_update->rowCount();
-
-        $message = "アイテムを{$count}件編集しました！";
+       
 
         header("Location: read.php?message={$message}");
     } catch (PDOException $e) {
@@ -79,7 +79,10 @@ if (isset($_GET['id'])) {
 <body>
 <main>
         <article>
-            <h1>釣竿編集</h1>
+            <header>
+                <a href="index.php">home</a>
+            </header>
+            <h1>釣竿更新</h1>
             <div class="nav">
                 <a href="read.php">&lt; 一覧へ</a>
             </div>

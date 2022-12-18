@@ -57,26 +57,29 @@ try {
 <body>
 <main>
         <article>
+            <header>
+                <a href="index.php">home</a>
+            </header>
             <h1>釣竿登録</h1>
             <div class="nav">
-                <a href="read.php">&lt; 一覧へ</a>
+                <p><a class="back" href="read.php">&lt; 一覧へ</a></p>
             </div>
             <form action="create.php" method="post">
                 <div class="registration">
                     <label for="name">釣竿メーカー名</label>
-                    <input type="text" name="name" required>
+                    <input class="input" type="text" name="name" required>
 
                     <label for="length">全長</label>
-                    <input type="text" name="length" required>
+                    <input  class="input" type="text" name="length" required>
 
                     <label for="number">継数</label>
-                    <input type="number" name="number" min="0" max="10" required>
+                    <input  class="input" type="number" name="number" min="0" max="10" required>
 
                     <label for="closing_size">仕舞寸法</label>
                     <input type="text" name="closing_size" required>
 
                     <label for="weight">錘負荷</label>
-                    <input type="text" name="weight" required>
+                    <input  class="input" type="text" name="weight" required>
                 </div>
                 <button type="submit" class="submit_btn" name="submit" value="create">登録</button>
             </form>
