@@ -4,6 +4,14 @@ $dsn = 'mysql:dbname=turi-baka;host=localhost;charset=utf8mb4';
 $user = 'root';
 $password = 'root'; 
 
+header('X-FRAME-OPTIONS:DENY');
+
+function h($table_row) {
+    return htmlspecialchars($table_row, ENT_QUOTES, 'UTF-8');
+}
+
+
+
 try {
     $pdo = new PDO($dsn, $user, $password);
 
@@ -29,16 +37,16 @@ try {
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<main>
+<body style="background-image: url('images/lake.jpg')">
+    <header>
+        <nav>
+            <a href="index.php">home</a>
+        </nav>
+    </header>
+    <main class="read_main">
         <article>
-            <header>
-                <a href="index.php">home</a>
-            </header>
             <h1>釣竿一覧</h1>
-            <div class="nav">
-                <a href="create.php" class="btn"><p>登録</p></a>
-            </div>
+            <a href="create.php" class="top_btn">登録</a>
             
             <table class="users_table">
                 <tr>
@@ -63,7 +71,7 @@ try {
                     <td><a href='delete.php?id={$user['id']}'>削除</a></td>
                     </tr>
                     ";
-                    echo $table_row;
+                    echo ($table_row);
                 }
                 ?>
             </table>

@@ -1,10 +1,27 @@
 body {
+    background-image: url('http://localhost:8888/turi-baka/images/rod-1.web');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     font-family: "Sawarabi Mincho";
+}
+
+.home {
+    box-sizing: border-box;
+    min-height: calc(100vh - 4rem);
+}
+
+
+.main header {
+    background-color: aqua;
+    height: 2rem;
+    margin-bottom: 10rem;
 }
 
 header {
     background-color: aqua;
     height: 2rem;
+    margin-bottom: 2rem;
 }
 
 nav {
@@ -13,25 +30,32 @@ nav {
 }
 
 main {
-    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
     text-align: center;
-    padding: 2rem 0 2rem;
+}
+
+.home main h1 {
+    font-size: 2rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
 }
 
 main h1 {
     font-size: 2rem;
+    margin-bottom: 3rem;
 }
 
-
-.btn {
-    margin-right: auto;
+.top_btn {
+    background-color: aqua;
+    border: solid 1px;
+    border-radius: 5px;
+    padding: 0.5rem 0.5rem;
 }
 
 .registration {
+    margin-top: 2rem;
     display: flex;
     flex-flow: column;
     text-align: center;
@@ -61,7 +85,7 @@ table {
 }
 
 th {
-    background-color: darkorange;
+    background-color: aqua;
     border: solid 2px;
     width: auto;
     height: 2rem;
@@ -74,6 +98,14 @@ tr td {
     padding: 1rem;
 }
 
-footer p {
+td {
+    background-color: antiquewhite;
+}
+
+footer  {
+    width: 100%;
+    line-height: 2rem;
+    position: fixed;
+    bottom: 0;
     text-align: center;
 }

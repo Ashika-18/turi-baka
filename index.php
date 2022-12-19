@@ -29,7 +29,7 @@ try {
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="home" style="background-image: url('images/lake.jpg')">
     <header>
         <nav>
             <a href="index.php">home</a>
@@ -38,7 +38,7 @@ try {
     <main>
         <article>
             <h1>釣竿管理アプリ</h1>
-            <a href="read.php">一覧</a>
+            <a class="top_btn" href="read.php">一覧</a>
         </article>
     </main>
     <footer>

@@ -4,6 +4,10 @@ $dsn = 'mysql:dbname=turi-baka;host=localhost;charset=utf8mb4';
 $user = 'root';
 $password = 'root'; 
 
+function h($str) {
+    return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
+}
+
 if (isset($_POST['submit'])) {
     try {
         $pdo = new PDO($dsn, $user, $password);
@@ -15,10 +19,10 @@ if (isset($_POST['submit'])) {
 
         $stmt_insert = $pdo->prepare($sql_insert);
 
-        $stmt_insert->bindValue(':name', $_POST['name'], PDO::PARAM_STR);
-        $stmt_insert->bindValue(':length', $_POST['length'], PDO::PARAM_STR);
+        $stmt_insert->bindValue (':name', $_POST['name'], PDO::PARAM_STR);
+        $stmt_insert->bindValue (':length', $_POST['length'], PDO::PARAM_STR);
         $stmt_insert->bindValue(':number', $_POST['number'], PDO::PARAM_INT);
-        $stmt_insert->bindValue(':closing_size', $_POST['closing_size'], PDO::PARAM_STR);
+        $stmt_insert->bindValue (':closing_size', $_POST['closing_size'], PDO::PARAM_STR);
         $stmt_insert->bindValue(':weight', $_POST['weight'], PDO::PARAM_STR);
 
         $stmt_insert->execute();
@@ -54,16 +58,17 @@ try {
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<main>
-        <article>
-            <header>
-                <a href="index.php">home</a>
-            </header>
+<body style="background-image: url('images/lake.jpg')">
+    <header>
+        <nav>
+            <a href="index.php">home</a>
+        </nav>
+    </header>
+    <main>
+        <article class="c_art">
             <h1>釣竿登録</h1>
-            <div class="nav">
-                <p><a class="back" href="read.php">&lt; 一覧へ</a></p>
-            </div>
+            <a class="top_btn" href="read.php">一覧へ</a>
+
             <form action="create.php" method="post">
                 <div class="registration">
                     <label for="name">釣竿メーカー名</label>
@@ -76,7 +81,7 @@ try {
                     <input  class="input" type="number" name="number" min="0" max="10" required>
 
                     <label for="closing_size">仕舞寸法</label>
-                    <input type="text" name="closing_size" required>
+                    <input class="input" type="text" name="closing_size" required>
 
                     <label for="weight">錘負荷</label>
                     <input  class="input" type="text" name="weight" required>
